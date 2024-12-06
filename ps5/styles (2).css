@@ -1,0 +1,221 @@
+/* Style global */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  margin: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #28a745;
+}
+
+nav .cart {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+
+nav .cart::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Main section */
+main {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-intro {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-intro:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  flex: 1;
+  text-align: center;
+  order: 1;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+  flex: 2;
+  padding: 20px;
+  order: 2;
+}
+
+.product-details h2 {
+  margin-top: 0;
+  font-size: 2.5em;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.product-details .price {
+  font-size: 1.6em;
+  color: #b12704;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.product-details .description {
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Options de condition */
+#condition button {
+  background-color: #fff;
+  color: #333;
+  padding: 14px 28px;
+  font-size: 1.3em;
+  font-weight: 600;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  text-transform: capitalize;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  outline: none;
+  position: relative;
+}
+
+/* Survol des boutons de condition */
+#condition button:hover {
+  background-color: #0056b3; /* Couleur bleue au survol */
+  color: white; /* Texte en blanc */
+  border-color: #003d7a; /* Bordure bleue foncée */
+  box-shadow: 0 10px 20px rgba(0, 91, 255, 0.3); /* Ombre plus douce */
+  transform: scale(1.1); /* Agrandir légèrement au survol */
+  transition: all 0.3s ease;
+  z-index: 1; /* Permet de faire ressortir le bouton au survol */
+}
+
+/* Survol actif des boutons de condition */
+#condition button:active {
+  transform: scale(0.98); /* Légère réduction au clic */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  background-color: #004085; /* Assombrissement au clic */
+  border-color: #003366; /* Assombrissement de la bordure */
+}
+
+/* Ajout de l'effet de sélection sur le bouton condition */
+#condition button.selected {
+  background-color: #28a745; /* Couleur verte pour la sélection */
+  color: white; /* Texte en blanc */
+  border-color: #1e7e34; /* Bordure verte foncée */
+  box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3); /* Ombre douce verte */
+}
+
+/* Ajouter au panier */
+.add-to-cart-btn {
+  background-color: #000; /* Couleur de fond noir */
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.6em;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 30px;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  max-width: 250px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Effet de survol sur le bouton Ajouter au panier */
+.add-to-cart-btn:hover {
+  background-color: #333; /* Couleur de fond noire plus foncée au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Ombre marquée au survol */
+  animation: bounce 0.3s ease-in-out; /* Animation subtile */
+}
+
+/* Effet actif du bouton Ajouter au panier */
+.add-to-cart-btn:active {
+  transform: scale(0.98); /* Légère réduction au clic */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); /* Ombre réduite */
+  background-color: #444; /* Assombrissement du fond au clic */
+}
+
+/* Animation de rebond pour "Ajouter au panier" */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Légère montée */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

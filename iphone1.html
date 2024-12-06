@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 - Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="les css/styles.css">
+</head>
+<body>
+
+<header>
+    <img src="photo/logo_site_YOT.jpg" alt="Logo de la Boutique">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="panier.html">Panier (<span id="cartQuantity">0</span>)</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="product-intro">
+        <div class="product-image">
+            <img src="photo/iphone-graphite.jpg" alt="iPhone 14" id="phoneImage">
+        </div>
+        <div class="product-details">
+            <h2>iPhone 14</h2>
+            <p id="base-price" class="price">à partir de 551,12€</p>
+            <p class="description">Découvrez l'iPhone 14 avec son écran Super Retina XDR, sa puce A16 Bionic, et son système de caméra avancé.</p>
+            <form class="options">
+                <label>Stockage :</label>
+                <div id="storage" class="storage-options">
+                    <button type="button" data-value="128gb" class="active">128 Go</button>
+                    <button type="button" data-value="256gb">256 Go</button>
+                    <button type="button" data-value="512gb">512 Go</button>
+                    <button type="button" data-value="1000gb">1 To</button>
+                </div>
+                <br>
+                <label>Couleur :</label>
+                <div id="color" class="color-options">
+                    <button type="button" onclick="updateColor('vert alpin');" style="background: #5cb85c;" title="Vert alpin">Vert alpin</button>
+                    <button type="button" onclick="updateColor('bleu alpin');" style="background: #5bc0de;" title="Bleu alpin">Bleu alpin</button>
+                    <button type="button" onclick="updateColor('graphite');" style="background: #343a40;" title="Graphite">Graphite</button>
+                    <button type="button" onclick="updateColor('or');" style="background: #ffd700;" title="Or">Or</button>
+                    <button type="button" onclick="updateColor('argent');" style="background: #c0c0c0;" title="Argent">Argent</button>
+                </div>
+                <br>
+                <button type="button" onclick="addToCart()">Ajouter au panier</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

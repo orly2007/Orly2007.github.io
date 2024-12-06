@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="les css/stylessp.css">
+</head>
+<body>
+
+<header>
+    <img src="photos_produits/logo_site.jpg" alt="Logo de la Boutique" class="logo">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="panier.html">Panier (<span id="cartQuantity">0</span>)</a>
+    <a href="produits.html">Produits</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section id="cart">
+        <h2>Votre panier</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <p>Frais de livraison : 20 €</p>
+            <p>Total : <span id="totalElement">0 €</span></p>
+        </div>
+        <button onclick="goToOrderPage()" class="btn-primary">Passer la commande</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Object Technological. Tous droits réservés.</p>
+</footer>
+
+<script>
+    function updateCartQuantity() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cartQuantity').textContent = cart.length;
+    }
+
+    function goToOrderPage() {
+        window.location.href = 'commande.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartQuantity);
+</script>
+</body>
+</html>
+

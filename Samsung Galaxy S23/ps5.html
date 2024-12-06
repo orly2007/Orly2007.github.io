@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 - Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="photo/logo_site_YOT.jpg" alt="Logo de la Boutique">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="panier.html">Panier (<span id="cartQuantity">0</span>)</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="product-intro">
+        <div class="product-image">
+            <img src="photo_s23/noir.jpg" alt="Ps5 slim" id="phoneImage">
+        </div>
+        <div class="product-details">
+            <h2>Galaxy S23</h2>
+            <p id="base-price" class="price">à partir de 699.99€</p>
+            <p class="description">La PS5 Slim allie puissance et design compact, offrant une expérience de jeu immersive avec des performances identiques à la PS5 standard. Disponible en version digitale ou avec lecteur Blu-ray, idéale pour tous les espaces !</p>
+            <form class="options">
+                <label>Stockage :</label>
+                <div id="storage" class="storage-options">
+                    <button type="button" data-value="128gb">128 Go</button>
+                    <button type="button" data-value="256gb">256 To</button>
+                </div>
+                <br>
+                <label>Couleur :</label>
+                <div id="color" class="color-options">
+                    <button type="button" onclick="updateColor('Mauve');" style="background: #ffffff;" title="Mauve">Mauve</button>
+                    <button type="button" onclick="updateColor('Noir');" style="background: #ffffff;" title="Noir">Noir</button>
+                    <button type="button" onclick="updateColor('vert');" style="background: #ffffff;" title="vert">vert</button>
+                    <button type="button" onclick="updateColor('Beige');" style="background: #ffffff;" title="Beige">Beige</button>
+
+                </div>
+                <br>
+                <label>État :</label>
+                <div id="condition" class="condition-options">
+                    <button type="button" data-value="correct">Correct</button>
+                    <button type="button" data-value="very_good">Very Good</button>
+                    <button type="button" data-value="perfect">Perfect</button>
+                    <button type="button" data-value="premium">Premium</button>
+                </div>
+                <br>
+                <button type="button" onclick="addToCart()">Ajouter au panier</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+<script src="scripts_panier.js"></script>
+<script src="scriptsps5.js"></script>
+
+</body>
+</html>

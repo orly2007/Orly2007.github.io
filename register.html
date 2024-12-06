@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Mon E-commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .container label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Inscription</h2>
+        <form id="registerForm">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+            
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            try {
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+                
+                if (response.ok) {
+                    alert('Inscription réussie ! Vous pouvez maintenant vous connecter.');
+                    window.location.href = 'login.html';
+                } else {
+                    const error = await response.json();
+                    alert(`Erreur : ${error.message || "Erreur lors de l'inscription."}`);
+                }
+            } catch (err) {
+                console.error('Erreur réseau:', err);
+                alert('Une erreur réseau s\'est produite. Veuillez réessayer.');
+            }
+        });
+    </script>
+</body>
+</html>

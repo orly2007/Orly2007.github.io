@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #232F3E;
+    color: white;
+    padding: 15px 30px;
+}
+
+header img {
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #FF9900;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size[_{{{CITATION{{{_1{](https://github.com/juracite/API-TEST-Dianophe/tree/30d8874a9d48bd4fb73efab0bb8d0dffdd8f088d/docs%2Fworkflow.md)[_{{{CITATION{{{_2{](https://github.com/js202005082300/Aide-m-moires/tree/c85c562d508c68fa086972462338ed773a25c8ac/JavaScript%2Fcours%2F002_hello_world%2Fnote.md)[_{{{CITATION{{{_3{](https://github.com/jpb4git/Exo-phpWork/tree/095b122cf8f5bc63dbc8ab9619be5459d248c33e/panier.php)[_{{{CITATION{{{_4{](https://github.com/kikstrn/test_markdown/tree/cf87059d22c6e1ee76e8a2da0b4a0257051a50be/markdown.md)

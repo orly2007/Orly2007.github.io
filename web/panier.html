@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <img src="logo_site.jpg" alt="Logo de la Boutique">
+    <h1>Boutique de Téléphones</h1>
+</header>
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="produits.html">Produits</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<main>
+    <section class="cart">
+        <h2>Votre Panier</h2>
+        <ul id="cart-list"></ul>
+        <div id="total">
+            <strong>Total :</strong> <span id="total-amount">0</span>€
+        </div>
+        <button class="checkout-button" onclick="showOrderForm()">Passer la Commande</button>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Boutique de Téléphones. Tous droits réservés.</p>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

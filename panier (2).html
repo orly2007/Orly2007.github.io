@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="les css/stylessp.css">
+    <script src="script.js" defer></script> <!-- Ajout de l'attribut defer pour charger correctement le script -->
+</head>
+<body>
+
+<header>
+    <img src="photos_produits/logo_site.jpg" alt="Logo de la Boutique" class="logo">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="panier.html">Panier (<span id="cartQuantity">0</span>)</a>
+    <a href="produits.html">Produits</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section id="cart">
+    <h2>Votre panier</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <p>Frais de livraison : 20 €</p>
+        <p>Total : <span id="totalElement">0 €</span></p>
+    </div>
+    <button onclick="goToOrderPage()" class="btn-primary">Passer la commande</button>
+</section>
+
+<section id="order-page" style="display:none;">
+    <h2>Passer la Commande</h2>
+    <form id="order-form" onsubmit="submitOrder(event)">
+        <div class="form-group">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Adresse de livraison :</label>
+            <input type="text" id="address" name="address" placeholder="Adresse complète" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+        </div>
+        <div class="form-group">
+            <label for="payment-method">Méthode de paiement :</label>
+            <select id="payment-method" name="payment-method" required onchange="togglePaymentFields()">
+                <option value="">Choisissez une méthode</option>
+                <option value="credit-card">Carte de crédit</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Virement bancaire</option>
+            </select>
+        </div>
+
+        <div id="credit-card-info" class="form-group" style="display:none;">
+            <label for="card-number">Numéro de carte :</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Numéro de carte">
+            <label for="card-expiry">Date d'expiration :</label>
+            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA">
+            <label for="card-cvc">CVC :</label>
+            <input type="text" id="card-cvc" name="card-cvc" placeholder="CVC">
+        </div>
+
+        <div id="paypal-info" class="form-group" style="display:none;">
+            <label for="paypal-email">Email PayPal :</label>
+            <input type="email" id="paypal-email" name="paypal-email" placeholder="Votre email PayPal">
+        </div>
+
+        <div id="bank-transfer-info" class="form-group" style="display:none;">
+            <label for="bank-account">Détails du virement bancaire :</label>
+            <input type="text" id="bank-account" name="bank-account" placeholder="Numéro de compte bancaire">
+        </div>
+
+        <div class="form-group">
+            <p>Frais de livraison : <strong>20 €</strong> (Livraison en 5 jours ouvrés)</p>
+        </div>
+
+        <div class="form-group">
+            <p><strong>Total à payer :</strong> <span id="order-total">50 €</span></p> <!-- Le total sera mis à jour par JavaScript -->
+        </div>
+
+        <button type="submit" class="btn-primary">Confirmer la commande</button>
+    </form>
+</section>
+
+<script>
+    // Affiche la page de commande et masque le panier
+    function goToOrderPage() {
+        document.getElementById('cart').style.display = 'none';
+        document.getElementById('order-page').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

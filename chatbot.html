@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant Client</title>
+    <link rel="stylesheet" href="assistant.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>Assistant Client</h2>
+    </div>
+    <div id="chat-window" class="chat-window">
+        <!-- Messages du chatbot et utilisateur -->
+    </div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Posez votre question ici..." />
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+</div>
+
+<script src="assistant.js"></script>
+</body>
+</html>

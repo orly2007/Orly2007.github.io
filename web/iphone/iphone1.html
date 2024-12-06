@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits de la boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo_site_YOT.jpg" alt="Logo de la Boutique">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="page panier.html">Panier</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="product-intro">
+        <div class="product-image">
+            <img src="iphone-graphite.jpg" alt="iPhone 14" id="phoneImage">
+        </div>
+        <div class="product-details">
+            <h2>iPhone 14</h2>
+            <p id="base-price" class="price">à partir de 551,12€</p>
+            <p class="description">Découvrez l'iPhone 14 avec son écran Super Retina XDR, sa puce A16 Bionic, et son système de caméra avancé.</p>
+            <form class="options" id="optionsForm">
+                <label>Stockage :</label>
+                <div id="storage" class="storage-options">
+                    <button type="button" onclick="updatePrice('128gb');" data-value="128gb">128 Go</button>
+                    <button type="button" onclick="updatePrice('256gb');" data-value="256gb">256 Go</button>
+                    <button type="button" onclick="updatePrice('512gb');" data-value="512gb">512 Go</button>
+                    <button type="button" onclick="updatePrice('1000gb');" data-value="1000gb">1 To</button>
+                </div>
+                <br>
+                <label>Couleur :</label>
+                <div id="color" class="color-options">
+                    <button type="button" onclick="updateColor('vert alpin'); updatePrice();" style="background: #5cb85c;" title="Vert alpin">Vert alpin</button>
+                    <button type="button" onclick="updateColor('bleu alpin'); updatePrice();" style="background: #5bc0de;" title="Bleu alpin">Bleu alpin</button>
+                    <button type="button" onclick="updateColor('graphite'); updatePrice();" style="background: #343a40;" title="Graphite">Graphite</button>
+                    <button type="button" onclick="updateColor('or'); updatePrice();" style="background: #ffd700;" title="Or">Or</button>
+                    <button type="button" onclick="updateColor('argent'); updatePrice();" style="background: #c0c0c0;" title="Argent">Argent</button>
+                </div>
+                <br>
+                <label>État :</label>
+                <div id="condition" class="condition-options">
+                    <button type="button" onclick="updatePrice('correct');" data-value="correct">État correct</button>
+                    <button type="button" onclick="updatePrice('very_good');" data-value="very_good">Très bon état</button>
+                    <button type="button" onclick="updatePrice('perfect');" data-value="perfect">Parfait état</button>
+                    <button type="button" onclick="updatePrice('premium');" data-value="premium">Premium</button>
+                </div>
+                <br>
+                <button type="button" class="add-to-cart">Ajouter au panier</button>
+            </form>
+        </div>
+    </section>
+    <section class="features">
+        <h3>Caractéristiques techniques</h3>
+        <ul>
+            <li>Écran: 6,7 pouces Super Retina XDR</li>
+            <li>Caméra: Système de double caméra (12 MP)</li>
+            <li>Batterie: Autonomie toute la journée</li>
+            <li>Puce: A16 Bionic</li>
+            <li>Compatibilité 5G</li>
+        </ul>
+    </section>
+    <section class="reviews">
+        <h3>Avis des Clients</h3>
+        <div class="review">
+            <h4>Utilisateur1</h4>
+            <div class="stars">★★★★★</div>
+            <p>Incroyable, une expérience unique !</p>
+        </div>
+        <div class="review">
+            <h4>Utilisateur2</h4>
+            <div class="stars">★★★★☆</div>
+            <p>Super téléphone, mais un peu cher.</p>
+        </div>
+    </section>
+    <section class="suggestions">
+        <h3>Produits Similaires</h3>
+        <div class="suggested-product">
+            <img src="image-product-1.jpg" alt="Produit 1">
+            <p>Produit similaire 1</p>
+        </div>
+        <div class="suggested-product">
+            <img src="image-product-2.jpg" alt="Produit 2">
+            <p>Produit similaire 2</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
+
+

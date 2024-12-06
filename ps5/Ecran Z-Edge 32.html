@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 14 - Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles (2).css">
+</head>
+<body>
+
+<header>
+    <img src="photo/logo_site_YOT.jpg" alt="Logo de la Boutique">
+    <h1>Your Object Technological</h1>
+</header>
+
+<nav>
+    <a href="Site DEF ORLY/index.html">Accueil</a>
+    <a href="Site DEF ORLY/panier.html">Panier (<span id="cartQuantity">0</span>)</a>
+    <a href="Site DEF ORLY/contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="product-intro">
+        <div class="product-image">
+            <img src="photo_ps5/ps5balnc.jpg" alt="Ps5 slim" id="phoneImage">
+        </div>
+        <div class="product-details">
+            <h2>Ps5 slim</h2>
+            <p id="base-price" class="price">à partir de 499.99€</p>
+            <p class="description">La PS5 Slim allie puissance et design compact, offrant une expérience de jeu immersive avec des performances identiques à la PS5 standard. Disponible en version digitale ou avec lecteur Blu-ray, idéale pour tous les espaces !</p>
+            <form class="options">
+                <label>Stockage :</label>
+                <div id="storage" class="storage-options">
+                    <button type="button" data-value="600gb">600 Go</button>
+                    <button type="button" data-value="1000gb">1 To</button>
+                </div>
+                <br>
+                <label>Couleur :</label>
+                <div id="color" class="color-options">
+                    <button type="button" onclick="updateColor('bleu');" style="background: #ffffff;" title="bleu">bleu</button>
+                    <button type="button" onclick="updateColor('black');" style="background: #ffffff;" title="black">Black</button>
+                    <button type="button" title="spiderman" onclick="updateColor('spiderman');" style="background-color: #ff0000;">spiderman</button>
+                    <button type="button" onclick="updateColor('white');" style="background: #ffffff;" title="white">white</button>
+                    <button type="button" onclick="updateColor('red');" style="background: #ffffff;" title="red">Red</button>
+                </div>
+                <br>
+                <label>État :</label>
+                <div id="condition" class="condition-options">
+                    <button type="button" data-value="correct">Correct</button>
+                    <button type="button" data-value="very_good">Very Good</button>
+                    <button type="button" data-value="perfect">Perfect</button>
+                    <button type="button" data-value="premium">Premium</button>
+                </div>
+                <br>
+                <button type="button" onclick="addToCart()">Ajouter au panier</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Votre Boutique. Tous droits réservés.</p>
+</footer>
+
+<script src="scriptsp.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
